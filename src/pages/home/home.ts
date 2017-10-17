@@ -20,4 +20,7 @@ export class HomePage {
   pushFam() {
     this.family.push({name:'Grandfather', phone_number: '010-1234-0004', address: '경북 포항시 북구 흥해읍 한동로 558 한동대학교 행복관', status: 'default'});
   }
+  markAsLike(fam: any) {
+    fam.status = "like";
+  }
 }
