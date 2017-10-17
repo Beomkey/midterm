@@ -23,4 +23,10 @@ export class HomePage {
   markAsLike(fam: any) {
     fam.status = "like";
   }
+  removeFam(fam: any) {
+    let index = this.family.indexOf(fam);
+    if (index > -1) {
+      this.family.splice(index, 1);
+    }
+  }
 }

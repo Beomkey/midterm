@@ -16,7 +16,7 @@
           {{fam.name}} <br>
           {{fam.phone_number}}    
       </ion-item>
-      <ion-item-options side="right">
+      <ion-item-options side="right" (ionSwipe) = "removeFam(fam)">
         <button ion-button icon-only (click)="markAsLike(fam)" color="star">
           <ion-icon name="star-outline"></ion-icon>
         </button>
