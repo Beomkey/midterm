@@ -7,11 +7,15 @@
       </button>
     </ion-buttons>
   </ion-navbar>
+  <ion-toolbar>
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  </ion-toolbar>
+  
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item-sliding *ngFor="let fam of family" (click)="goFamDetails(fam)" detail-push>
+    <ion-item-sliding *ngFor="let fam of searchRes" (click)="goFamDetails(fam)" detail-push>
       <ion-item [ngClass]="{famLike: fam.status == 'like'}">
           {{fam.name}} <br>
           {{fam.phone_number}}    
