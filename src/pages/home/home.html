@@ -11,7 +11,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item-sliding *ngFor="let fam of family">
+    <ion-item-sliding *ngFor="let fam of family" (click)="goFamDetails(fam)" detail-push>
       <ion-item [ngClass]="{famLike: fam.status == 'like'}">
           {{fam.name}} <br>
           {{fam.phone_number}}    

@@ -6,7 +6,7 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  family: Array<any> = [];
+  family: Array<Object> = [];
     
   constructor(public navCtrl: NavController) {
     this.family = [
@@ -29,4 +29,14 @@ export class HomePage {
       this.family.splice(index, 1);
     }
   }
+  goFamDetails(theFam: any) {
+    this.navCtrl.push("FamDetailsPage", { fam: theFam });
+  }
+}
+
+export class Fam {
+  name: string;
+  phone_number: string;
+  address: string;
+  status: string;
 }
